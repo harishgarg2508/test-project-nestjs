@@ -8,11 +8,13 @@ export class User2Service {
 
 
     getHello(): string {
+        console.log("hello is called in user2 service")
         return this.User1Service.getHello()
 
 
     }
     getCurrentTime():string{
+        
         return this.currentTime;
     }
 }

@@ -10,7 +10,7 @@ export class User3Controller {
 
   @Get()
   getData(){
-   
+    console.log("user3 controller is called")
     return {
       user1:this.user2Service.getHello(),
       user2:this.user2Service.getCurrentTime(),
