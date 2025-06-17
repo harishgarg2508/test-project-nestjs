@@ -14,7 +14,7 @@ export class User2Service {
 
     }
     getCurrentTime():string{
-        
+        console.log("time is called in user2 service")
         return this.currentTime;
     }
 }
