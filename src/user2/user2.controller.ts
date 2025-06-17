@@ -8,6 +8,6 @@ export class User2Controller {
    @Get('time')
    getTime(){
     console.log('this is from user2 controller');
-    return this.user2Service.getProvidedTime();
+    return this.user2Service.getTime();
    }
 }

@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common';
 export class User2Service {
     constructor(private readonly timeFromUser1: string) {}
 
-    getProvidedTime(): string {
+    getTime(): string {
         return `Time from User1Service using User2Factory: ${this.timeFromUser1}`;
     }
 }

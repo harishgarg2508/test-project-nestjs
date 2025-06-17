@@ -1,4 +1,4 @@
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { User2Service } from '../user2/user2.service'; 
 
 @Controller('user3')
@@ -8,6 +8,6 @@ export class User3Controller {
   @Get('time')
   getProcessedTime(): string {
     console.log('this is from user3 controller');
-    return this.user2Service.getProvidedTime();
+    return this.user2Service.getTime();
   }
 }
