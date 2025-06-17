@@ -1,13 +1,20 @@
 import { Controller, Get } from '@nestjs/common';
 import { User2Service } from '../user2/user2.service'; 
-
+import { User3Service } from './user3.service';
 @Controller('user3')
 export class User3Controller {
-  constructor(private readonly user2Service: User2Service) {}
+  constructor(private readonly user2Service: User2Service,
+    private readonly user3Service: User3Service,
+  ) {}
 
-  @Get('time')
-  getProcessedTime(): string {
-    console.log('this is from user3 controller');
-    return this.user2Service.getTime();
+
+  @Get()
+  getData(){
+   
+    return {
+      user1:this.user2Service.getHello(),
+      user2:this.user2Service.getCurrentTime(),
+      user3:this.user3Service.getWorld(),
+    }
   }
 }
